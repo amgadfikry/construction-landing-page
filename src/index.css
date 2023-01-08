@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+  :root{
+    --main:#18A7B9;
+    --gray:#6B6B6B;
+    --orange:#FE8432;
+    --green:#42B918;
+    --black:#313131;
+    font-size: calc(0.5em + 1vw);
+  }
+  html{
+    font-family: 'Poppins', sans-serif;
+  }
+}
+
+@layer utilities{
+  .btn-bg{
+    @apply block px-7 py-2 bg-mainC text-white border-solid border-2 border-mainC hover:bg-transparent hover:text-mainC
+    transition-all duration-300 cursor-pointer rounded-tl-3xl rounded-br-3xl text-[0.8rem]
+  }
+  .btn-trans{
+    @apply block px-7 py-2 bg-transparent text-mainC border-solid border-2 border-mainC hover:bg-mainC hover:text-white
+    transition-all duration-300 cursor-pointer rounded-tl-3xl rounded-br-3xl text-[0.8rem]
+  }
+  .half-circle{
+    @apply before:absolute before:border-[1rem] before:border-solid  before:border-b-transparent
+    before:border-r-transparent before:top-[-20%] before:left-0 before:-z-10 before:rounded-full
+  }
+  .square{
+    @apply before:absolute before:w-[2.5rem] before:h-[2.5rem] before:left-[40%] md:before:left-[35%] before:top-[80%] before:translate-x-[-50%]
+    before:translate-y-[-50%] before:-z-10 before:rounded-tr-2xl before:rounded-bl-2xl
+  }
+  .btn-blog{
+    @apply block px-7 py-2 bg-transparent text-white border-solid border-2 border-white hover:bg-white hover:text-blackC
+    transition-all duration-300 cursor-pointer rounded-tl-3xl rounded-br-3xl text-[0.8rem]
+  }
+}
+
+.blog::-webkit-scrollbar{
+  width: 3px;
+}
+.blog::-webkit-scrollbar-track {
+  background-color: rgb(185, 184, 184);
+}
+.blog::-webkit-scrollbar-thumb{
+  background-color: var(--main);
+  outline: 0;
+}
